@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="50%" stop-color="#2563FF" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#050608"/>
+  <path d="M50 15 L80 30 L80 60 L50 85 L20 60 L20 30 Z" fill="none" stroke="url(#cyber-grad)" stroke-width="3"/>
+  <text x="50" y="58" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="900" fill="#F5F7FA" text-anchor="middle" letter-spacing="1">SK</text>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#2563FF" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+</svg>
