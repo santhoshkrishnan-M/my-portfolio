@@ -1,6 +1,7 @@
 import React from 'react';
 import { Terminal, Trophy, Star, Users, Presentation } from 'lucide-react';
 import { achievementsData } from '../data/portfolioData';
+import ScrollReveal from './ScrollReveal';
 
 export const Achievements: React.FC = () => {
   return (
@@ -17,14 +18,16 @@ export const Achievements: React.FC = () => {
           <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
             MILESTONES
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#2563FF] to-[#00E5FF] mt-4 rounded-full" />
-          <p className="text-[#9CA3AF] text-sm max-w-xl mt-4 font-sans">
-            Recognitions in hackathons, paper presentations, ideathons, and technical community volunteering.
-          </p>
+          <div className="accent-line mt-4" />
+          <div className="max-w-xl mt-4">
+            <ScrollReveal baseOpacity={0.1} enableBlur={true} baseRotation={2} blurStrength={4}>
+              Recognitions in hackathons, paper presentations, ideathons, and technical community volunteering.
+            </ScrollReveal>
+          </div>
         </div>
 
         {/* Milestones Horizontal Timeline / Editorial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
           {achievementsData.map((item, index) => (
             <div
               key={item.id}

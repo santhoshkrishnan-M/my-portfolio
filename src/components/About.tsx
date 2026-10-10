@@ -1,6 +1,7 @@
 import React from 'react';
 import { Terminal, ShieldCheck, Cpu, BookOpen, MapPin, GraduationCap } from 'lucide-react';
 import { personalInfo, focusAreas } from '../data/portfolioData';
+import ScrollReveal from './ScrollReveal';
 
 export const About: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ export const About: React.FC = () => {
             <h2 className="font-display font-black text-5xl sm:text-6xl md:text-7xl text-white tracking-tight uppercase mb-2">
               ABOUT
             </h2>
+            <div className="accent-line mb-4" />
             
             <a
               href={`mailto:${personalInfo.email}`}
@@ -31,12 +33,12 @@ export const About: React.FC = () => {
             </a>
 
             <div className="space-y-6 text-[#9CA3AF] font-sans text-base sm:text-lg leading-relaxed max-w-2xl">
-              <p>
-                I'm a <strong className="text-white font-semibold">Computer Science and Engineering student at SNS College of Technology</strong> with a growing interest in cybersecurity and ethical hacking. I enjoy understanding how systems work, exploring security tools, and building practical software projects.
-              </p>
-              <p>
+              <ScrollReveal baseOpacity={0} enableBlur={true} baseRotation={3} blurStrength={6}>
+                I'm a Computer Science and Engineering student at SNS College of Technology with a growing interest in cybersecurity and ethical hacking. I enjoy understanding how systems work, exploring security tools, and building practical software projects.
+              </ScrollReveal>
+              <ScrollReveal baseOpacity={0} enableBlur={true} baseRotation={2} blurStrength={4}>
                 My current focus is strengthening my programming fundamentals, learning web application security testing, and developing the practical skills required for a cybersecurity career.
-              </p>
+              </ScrollReveal>
             </div>
 
             {/* Bottom Location Indicator matching Reference UI */}
@@ -85,7 +87,8 @@ export const About: React.FC = () => {
         </div>
 
         {/* 3 Focus Areas Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 border-t border-white/10">
+        <div className="section-divider mb-10" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
           {focusAreas.map((area) => (
             <div
               key={area.number}

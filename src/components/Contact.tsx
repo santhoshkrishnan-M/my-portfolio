@@ -3,6 +3,7 @@ import { Terminal, Mail, Copy, Check, Send, AlertCircle, ShieldCheck } from 'luc
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
 import StarBorder from './StarBorder';
+import ScrollReveal from './ScrollReveal';
 
 export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -69,10 +70,12 @@ export const Contact: React.FC = () => {
           <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
             LET'S BUILD SOMETHING SECURE.
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#2563FF] to-[#00E5FF] mt-4 rounded-full" />
-          <p className="text-[#9CA3AF] text-base max-w-2xl mt-4 font-sans leading-relaxed">
-            I'm open to cybersecurity internship opportunities, technical collaborations, and conversations about security, software engineering, and practical learning.
-          </p>
+          <div className="accent-line mt-4" />
+          <div className="text-[#9CA3AF] text-base max-w-2xl mt-4 font-sans leading-relaxed">
+            <ScrollReveal baseOpacity={0.1} enableBlur={true} baseRotation={2} blurStrength={4}>
+              I'm open to cybersecurity internship opportunities, technical collaborations, and conversations about security, software engineering, and practical learning.
+            </ScrollReveal>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

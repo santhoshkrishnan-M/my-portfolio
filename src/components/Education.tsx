@@ -17,7 +17,7 @@ export const Education: React.FC = () => {
           <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
             THE FOUNDATION
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#2563FF] to-[#00E5FF] mt-4 rounded-full" />
+          <div className="accent-line mt-4" />
         </div>
 
         {/* Education Hero Card */}

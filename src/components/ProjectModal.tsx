@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { X, ShieldAlert, Cpu, CheckCircle2, Workflow, AlertCircle } from 'lucide-react';
 import { GithubIcon } from './Icons';
+import ScrollReveal from './ScrollReveal';
 import type { Project } from '../types';
 
 interface ProjectModalProps {
@@ -46,9 +47,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 {project.category}
               </span>
             </div>
-            <h2 className="font-display font-bold text-2xl sm:text-3xl text-white">
-              {project.fullTitle}
-            </h2>
+            <div className="font-display font-bold text-2xl sm:text-3xl text-white">
+              <ScrollReveal
+                baseOpacity={0}
+                enableBlur={true}
+                baseRotation={5}
+                blurStrength={10}
+              >
+                {project.fullTitle}
+              </ScrollReveal>
+            </div>
           </div>
 
           <button

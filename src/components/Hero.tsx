@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
         {/* Oversized Dramatic Headline */}
         <h1 className="font-display font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter uppercase leading-[0.9] text-transparent bg-clip-text bg-gradient-to-b from-white via-[#F5F7FA] to-[#9CA3AF] mb-8 select-none">
           EXPLORE.<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] via-[#2563FF] to-[#8B5CF6]">
+          <span className="text-shimmer">
             TEST.
           </span><br />
           SECURE.

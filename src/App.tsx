@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CosmicBackground } from './components/CosmicBackground';
+import PixelBlast from './components/PixelBlast';
 import { GlyphStream } from './components/GlyphStream';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -42,8 +42,23 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#050608] text-[#F5F7FA] relative selection:bg-[#2563FF]/30 selection:text-[#00E5FF]">
-      {/* Background Canvas Particles and Grid */}
-      <CosmicBackground />
+      {/* PixelBlast Full-Site Background */}
+      <div className="fixed inset-0 z-0" style={{ pointerEvents: 'none' }}>
+        <PixelBlast
+          variant="circle"
+          pixelSize={5}
+          color="#1e4fd8"
+          patternScale={3.2}
+          patternDensity={1.2}
+          pixelSizeJitter={0.45}
+          enableRipples={false}
+          liquid={false}
+          speed={0.35}
+          edgeFade={0.2}
+          transparent={true}
+          style={{ opacity: 0.45, pointerEvents: 'none' }}
+        />
+      </div>
 
       {/* React Bits Pro Glyph Stream Cursor & Splash Effect */}
       <GlyphStream />

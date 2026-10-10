@@ -1,6 +1,7 @@
 import React from 'react';
 import { Terminal, Code2, ShieldCheck, Cpu, Brain, CheckCircle } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
+import ScrollReveal from './ScrollReveal';
 
 export const Skills: React.FC = () => {
   return (
@@ -17,14 +18,16 @@ export const Skills: React.FC = () => {
           <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
             TOOLS & TECHNOLOGIES
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#2563FF] to-[#00E5FF] mt-4 rounded-full" />
-          <p className="text-[#9CA3AF] text-sm max-w-xl mt-4 font-sans">
-            An honest taxonomy of tools, programming languages, security software, and frameworks I am actively learning and applying in projects.
-          </p>
+          <div className="accent-line mt-4" />
+          <div className="max-w-xl mt-4">
+            <ScrollReveal baseOpacity={0.1} enableBlur={true} baseRotation={2} blurStrength={4}>
+              An honest taxonomy of tools, programming languages, security software, and frameworks I am actively learning and applying in projects.
+            </ScrollReveal>
+          </div>
         </div>
 
         {/* Skill Category Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
           {skillCategories.map((cat, idx) => (
             <div
               key={cat.title}

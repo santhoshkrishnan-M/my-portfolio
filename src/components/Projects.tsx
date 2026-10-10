@@ -4,6 +4,7 @@ import { projectsData } from '../data/portfolioData';
 import type { Project } from '../types';
 import { ProjectModal } from './ProjectModal';
 import StarBorder from './StarBorder';
+import ScrollReveal from './ScrollReveal';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -30,12 +31,14 @@ export const Projects: React.FC = () => {
             <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
               SELECTED PROJECTS
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#2563FF] to-[#00E5FF] mt-4 rounded-full" />
+            <div className="accent-line mt-4" />
           </div>
 
-          <p className="text-[#9CA3AF] text-sm max-w-md mt-4 md:mt-0 font-sans">
-            Displaying six confirmed technical projects across cybersecurity, artificial intelligence, supply chain orchestration, and workflow automation.
-          </p>
+          <div className="text-[#9CA3AF] text-sm max-w-md mt-4 md:mt-0 font-sans">
+            <ScrollReveal baseOpacity={0.1} enableBlur={true} baseRotation={2} blurStrength={4}>
+              Displaying six confirmed technical projects across cybersecurity, artificial intelligence, supply chain orchestration, and workflow automation.
+            </ScrollReveal>
+          </div>
         </div>
 
         {/* Category Filter Chips using StarBorder */}

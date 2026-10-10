@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Terminal, CheckCircle2 } from 'lucide-react';
 import { certificationsData } from '../data/portfolioData';
 import StarBorder from './StarBorder';
+import ScrollReveal from './ScrollReveal';
 
 export const Certifications: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'All' | 'Certification' | 'Course' | 'Job Simulation'>('All');
@@ -25,12 +26,14 @@ export const Certifications: React.FC = () => {
             <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase">
               LEARNING & CERTIFICATIONS
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#2563FF] to-[#00E5FF] mt-4 rounded-full" />
+            <div className="accent-line mt-4" />
           </div>
 
-          <p className="text-[#9CA3AF] text-sm max-w-md mt-4 md:mt-0 font-sans">
-            Verified course completions, technical certifications, and hands-on industry job simulations.
-          </p>
+          <div className="text-[#9CA3AF] text-sm max-w-md mt-4 md:mt-0 font-sans">
+            <ScrollReveal baseOpacity={0.1} enableBlur={true} baseRotation={2} blurStrength={4}>
+              Verified course completions, technical certifications, and hands-on industry job simulations.
+            </ScrollReveal>
+          </div>
         </div>
 
         {/* Category Selector with StarBorder */}
@@ -56,7 +59,7 @@ export const Certifications: React.FC = () => {
         </div>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
           {filteredCerts.map((cert) => (
             <div
               key={cert.id}
